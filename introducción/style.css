@@ -1,0 +1,19 @@
+img {
+    width: 64px;
+    background-color: #22B2DA;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F23557;
+    color: #22B2DA;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    text-decoration: underline wavy red;
+}
