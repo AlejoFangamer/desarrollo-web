@@ -1,17 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Imagenes y Formularios</title>
-    </head>
-    <body>
-        <center>
-            <img src="https://kstatic.googleusercontent.com/files/9f04faac24aed8bf8fb381029de951128d1d36373f89675265a6654d0c47b74b2d83a26b68b834ce2eea3bfe8001966f76895888138f135a81d099fc207c73bb" alt="icono de Forms" width="254px">
-        </center>
-        <h1>Encuesta <i>Personal</i></h1>
-        <p>Hola</p>
-        <img src="./jardineria.png" alt="Moco" height="150px">
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imagenes y Formularios</title>
+  </head>
+
+  <body>
+    <header>
+      <img
+        src="https://kstatic.googleusercontent.com/files/9f04faac24aed8bf8fb381029de951128d1d36373f89675265a6654d0c47b74b2d83a26b68b834ce2eea3bfe8001966f76895888138f135a81d099fc207c73bb"
+        alt="icono de Forms"
+        width="254px"
+      />
+      <nav>
+        <a href="#about">Quienes somos ?</a>
+        <a href="#services">Servicios</a>
+        <a href="#contact">Contacto</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h1>Quienes somos ?</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          animi dolor nulla quibusdam architecto inventore iste quo id illo
+          natus fugit quia, deleniti ipsum ab nam debitis nemo voluptate
+          corrupti?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          animi dolor nulla quibusdam architecto inventore iste quo id illo
+          natus fugit quia, deleniti ipsum ab nam debitis nemo voluptate
+          corrupti?
+        </p>
+      </section>
+
+      <section id="services">
+        <h1>Servicios</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          animi dolor nulla quibusdam architecto inventore iste quo id illo
+          natus fugit quia, deleniti ipsum ab nam debitis nemo voluptate
+          corrupti?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          animi dolor nulla quibusdam architecto inventore iste quo id illo
+          natus fugit quia, deleniti ipsum ab nam debitis nemo voluptate
+          corrupti?
+        </p>
+      </section>
+
+      <section id="contact">
+        <h1>Contactanos</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          animi dolor nulla quibusdam architecto inventore iste quo id illo
+          natus fugit quia, deleniti ipsum ab nam debitis nemo voluptate
+          corrupti?
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+          animi dolor nulla quibusdam architecto inventore iste quo id illo
+          natus fugit quia, deleniti ipsum ab nam debitis nemo voluptate
+          corrupti?
+        </p>
+
+        <form action="" method="get">
+          <h2>
+            <legend>Hazme una pregunta:</legend>
+          </h2>
+          <br />
+
+          <label>Nombre completo:</label><br />
+          <input
+            type="text"
+            placeholder="Introduzca su nombre..."
+            name="Nombre"
+            required
+          />
+          <br /><br />
+
+          <label>Correo:</label><br />
+          <input
+            type="email"
+            placeholder="Introduzca su correo..."
+            name="Correo"
+            required
+          />
+          <br /><br />
+
+          <label>Tipo de pregunta:</label><br />
+          <select name="Tdepregunta">
+            <option>Personal</option>
+            <option>Laboral</option>
+            <option>Otro tipo</option>
+          </select>
+          <br /><br />
+
+          <label>Pregunta:</label><br />
+          <textarea
+            name=""
+            id=""
+            cols="20"
+            rows="10"
+            placeholder="Introduzca su pregunta.."
+            required
+          ></textarea>
+
+          <br />
+          <input type="submit" value="Enviar" />
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <a href="./politica.html" target="_blank">
+        <h4>Politica de privacidad - Alejandro Moreno</h4>
+      </a>
+    </footer>
+  </body>
 </html>
