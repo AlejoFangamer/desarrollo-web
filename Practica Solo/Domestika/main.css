@@ -1,7 +1,260 @@
-section {
-  background: pink
-} 
+* {
+  box-sizing: border-box;
+}
 
-ul {
-  background: gray
+html,
+body {
+  --border-radius: 100px;
+  --gutter: 3.125vw;
+
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: "Syne", sans-serif;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 80px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 60px;
+  margin: 0;
+}
+
+a {
+  font-family: "Space Mono", monospace;
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px);
+  top: 100px;
+  z-index: 2;
+}
+
+section.sticky {
+  position: sticky;
+  margin-top: 100px;
+}
+
+section.fullscreen {
+  height: 100vh;
+  top: 0;
+  margin-top: 0;
+  z-index: 3;
+}
+
+/* Barra de navegacion */
+nav {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style: none;
+  margin-left: 45px;
+}
+
+nav ul li a {
+  color: white;
+}
+
+/* Secciones */
+
+section.about .empty {
+  flex-basis: 37.5vw;
+  background: gray;
+  border-radius: var(--border-radius);
+}
+
+section.about article {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+section.about article .title {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  background: blue;
+  border-radius: var(--border-radius);
+  padding: var(--gutter);
+}
+
+section.about article .description {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: pink;
+  border-radius: var(--border-radius);
+  padding: var(--gutter);
+  color: black;
+}
+
+/* Seccion de servicios */
+
+section.service article {
+  display: flex;
+  width: 100%;
+}
+
+section.service figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 56.25vw;
+  margin: 0;
+  background: rgb(168, 255, 168);
+  border-radius: var(--border-radius);
+}
+
+section.service figure img {
+  width: 50%;
+}
+
+section.service .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  background: gray;
+  padding: var(--gutter);
+  border-radius: var(--border-radius);
+}
+
+section.service .text a {
+  font-family: "Space Mono", monospace;
+}
+
+/* Animaciones */
+
+@keyframes flotar {
+  0% {
+    transform: translateY(-20px);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}
+
+section.service.service-html figure img {
+  animation-name: flotar;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+/* Secciones */
+
+section.service.service-html figure {
+  background: rgb(182, 255, 182);
+}
+
+section.service.service-html .text h2,
+section.service.service-html .text a {
+  color: rgb(255, 182, 255);
+}
+
+section.service.service-css figure {
+  background: rgb(255, 182, 255);
+}
+
+section.service.service-css .text h2,
+section.service.service-css .text a {
+  color: rgb(182, 255, 182);
+}
+
+section.service.service-js figure {
+  background: rgb(255, 250, 182);
+}
+
+section.service.service-js .text h2,
+section.service.service-js .text a {
+  color: rgb(255, 250, 182);
+}
+
+/* Seccion de contacto */
+
+section.contact {
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(blue, gray, purple);
+  border-radius: var(--border-radius);
+}
+
+section.contact h2 {
+  font-size: 100px;
+  color: black;
+  transition: color 1s ease-in-out;
+  transition: font-size 1s ease-in-out;
+  transition: filter 1s;
+  will-change: filter;
+}
+
+section.contact h2:hover {
+  color: red;
+  filter: blur(25px);
+}
+
+/* MEDIA RESPONSIVE */
+
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    --border-radius: 50px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  nav ul li {
+    margin-left: 25px;
+  }
+
+  section.service article {
+    flex-direction: column;
+  }
+
+  section.service figure {
+    flex-basis: 25vh;
+  }
+
+  section.service figure img {
+    width: 20%;
+  }
+
+  section.contact h2 {
+    font-size: 50px;
+    transform: rotate(90deg);
+  }
 }
