@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+h1 {
+  color: black;
+  font-size: 32px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+h1:hover {
+  color: pink;
+  font-size: 64px;
+}
+
+p {
+  color: bisque;
+}
+
+.clase {
+  color: tomato;
+}
+
+#id {
+  color: red;
+}
+
+div {
+  color: chocolate;
+}
