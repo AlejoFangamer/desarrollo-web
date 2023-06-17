@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.padre {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  gap: 5px; 
+
+  height: 100vh;
+  background: rgb(230, 230, 230);
+}
+
+.hijo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  background: aquamarine;
+  width: 100px;
+}
