@@ -6,8 +6,6 @@
 
 body {
   font-family: "Hanken Grotesk", sans-serif;
-  width: 100%;
-  height: 100%;
 }
 
 main {
@@ -21,28 +19,174 @@ main {
   display: flex;
   width: 900px;
   height: 600px;
-  box-shadow: 15px 15px 100px -50px hsl(241, 100%, 89%);
+
+  box-shadow: 30px 30px 100px -30px hsl(241, 100%, 89%);
   border-radius: 40px;
   overflow: hidden;
 }
+
+.titulo {
+  opacity: 75%;
+  font-size: 28px;
+}
+
+.total {
+  opacity: 50%;
+  font-weight: 800;
+}
+
+/* -----Lado derecho----- */
 
 .caja-izq {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+
   width: 50%;
-  padding: 50px;
+  height: 100%;
+  padding: 58px;
 
   color: white;
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   border-radius: 40px;
 }
 
-.caja-izq h2 {
+/* Circulo de resultados */
+
+.result-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 14em;
+  height: 14em;
+  padding: 80px;
+
+  background-image: linear-gradient(hsl(241, 81%, 54%), hsl(252, 100%, 67%));
+  border-radius: 50%;
+}
+
+.result-circle h1 {
+  font-size: 90px;
+}
+
+.result-circle .total {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+/* Frase de resultado */
+
+.resultado {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.resultado h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.resultado p {
+  font-size: 23px;
+  font-weight: 500;
+  text-align: center;
   opacity: 75%;
 }
 
+/* -----Lado derecho----- */
+
 .caja-der {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 50%;
-  padding: 50px;
+  height: 100%;
+  padding: 58px;
+}
+
+/* Seteo de bloques */
+
+.bloques {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.bloques .lado-izq {
+  display: flex;
+}
+
+.bloques img {
+  margin-right: 15px;
+}
+
+.bloc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 15px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Colores de los bloques/texto */
+
+.bloc > h3 {
+  color: black;
+}
+
+.reaction {
+  color: hsl(0, 100%, 67%);
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.memory {
+ color: hsl(39, 100%, 56%);
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.verbal {
+  color: hsl(166, 100%, 37%);
+  background-color: hsl(166, 100%, 37%, 0.1);
+}
+
+.visual {
+  color: hsl(234, 85%, 45%);
+  background-color: hsl(234, 85%, 45%, 0.1);
+}
+
+.bloque__title {
+  display: flex;
+}
+
+/* Boton */
+
+a {
+  display: flex;
+  justify-content: center;
+  padding: 18px;
+  width: 100%;
+
+  background-color: hsl(224, 30%, 27%);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 800;
+
+  border: 2px solid  hsl(224, 30%, 27%);
+
+  transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+a:hover {
+  color: hsl(224, 30%, 27%);
+  background-color: hsla(224, 30%, 27%,0);
 }
