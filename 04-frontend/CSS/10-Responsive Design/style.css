@@ -1,0 +1,29 @@
+
+body {
+  background-color: aqua;
+}
+
+h1 {
+  color: brown;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px){
+  body {
+    background-color: black;
+  }
+
+  h1 {
+    color: aliceblue;
+  }
+}
+
+@media screen and (min-width: 800px){
+  body {
+    background-color: white;
+  }
+
+  h1 {
+    display: none;
+  }
+}

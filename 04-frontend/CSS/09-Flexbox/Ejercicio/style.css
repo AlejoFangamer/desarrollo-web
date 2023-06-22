@@ -130,6 +130,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 18px 15px;
   border-radius: 10px;
   flex-wrap: wrap;
@@ -148,7 +149,7 @@ main {
 }
 
 .memory {
- color: hsl(39, 100%, 56%);
+  color: hsl(39, 100%, 56%);
   background-color: hsla(39, 100%, 56%, 0.1);
 }
 
@@ -181,12 +182,66 @@ a {
   text-align: center;
   font-weight: 800;
 
-  border: 2px solid  hsl(224, 30%, 27%);
+  border: 2px solid hsl(224, 30%, 27%);
 
   transition: background-color 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 a:hover {
   color: hsl(224, 30%, 27%);
-  background-color: hsla(224, 30%, 27%,0);
+  background-color: hsla(224, 30%, 27%, 0);
+}
+
+@media screen and (max-width: 370px) {
+  main {
+    height: 100%;
+  }
+  .contenedor-carta {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    border-radius: 0px;
+  }
+
+  .caja-izq {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+    border-radius: 0px 0px 40px 40px;
+  }
+
+  .titulo {
+    font-size: 22px;
+  }
+
+  .resultado h2 {
+    font-size: 22px;
+  }
+
+  .resultado p {
+    font-size: 16px;
+  }
+
+  .result-circle {
+    width: 8em;
+    height: 8em;
+    margin: 10px;
+    padding: 40px;
+  }
+
+  .result-circle h1 {
+    font-size: 60px;
+  }
+
+  .result-circle .total {
+    font-size: 16px;
+  }
+
+  .caja-der {
+    padding: 25px;
+    width: 100%;
+  }
+  .bloc {
+    flex-wrap: nowrap;
+  }
 }
