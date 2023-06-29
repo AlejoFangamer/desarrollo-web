@@ -1,11 +1,12 @@
 // Definir el objeto de la mascota
-var mascota = {
+const mascota = {
   nombre: "nulo",
   energia: 100,
   hambre: 50,
   color: "naranja",
   estadoEmocional: "Feliz",
   habilidades: ["Dar la pata", "Dar una vuelta", "Perseguir la pelota"],
+  vivo: true,
   jugar() {
     if (this.energia <= 0) {
       return "¡No tengo suficiente energía para jugar!";
@@ -43,7 +44,9 @@ var mascota = {
       "\nEstado Emocional: " +
       this.estadoEmocional +
       "\nHabilidades: " +
-      this.habilidades
+      this.habilidades +
+      "\nMascota viva: " +
+      this.vivo
     );
   },
   nombreInicial() {
@@ -51,10 +54,15 @@ var mascota = {
     this.nombre = mascota_nomb;
     console.log("Mi mascota se llama " + mascota_nomb);
     document.write(this.nombre);
-  },
+  }
 };
 
 // Probar el simulador
 console.log("Bienvenido al simulador de mascota");
 mascota.nombreInicial();
 console.log(mascota.estado());
+
+console.log("comandos funciones: jugar,comer,descansar,estado")
+console.log("comandos estadisticas: color,estadoEmocional,habilidades,hambre,energia,nombre,vivo");
+
+mascota.habilidades.push("Hanatarash")
