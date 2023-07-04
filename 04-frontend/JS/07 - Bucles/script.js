@@ -25,6 +25,7 @@ let contador = 0;
 
 ///RETOS
 
+/*
 //1
 console.log("RETO 1");
 
@@ -66,3 +67,28 @@ for (let papa = 1; papa <= 100; papa++) {
 // for (let papa = 1; papa <= 100; papa++) {
 //   console.log(papa+papa);
 // }
+*/
+
+let numeros = [2, 1, 5, 4, 7];
+
+function ParImpar(numero) {
+  numero = numero.sort(function (a, b) {
+    return a - b;
+  });
+
+  let pares = [];
+  let impares = [];
+  for (let i = 0; i < numero.length; i++) {
+    if (numero[i] % 2 == 0) {
+      pares.push(numero[i]);
+    } else {
+      impares.push(numero[i]);
+    }
+  }
+  console.log(`Tamaño de la array: ${numero.length}`);
+  console.log(`Numero de pares: ${pares.length}`);
+  console.log(`Numero de impares: ${impares.length}`);
+  console.log("Numero mayor: " + Math.max(...numero));
+}
+
+ParImpar(numeros);
