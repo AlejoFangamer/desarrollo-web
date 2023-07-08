@@ -262,7 +262,6 @@ function conection(status) {
     return "Offline";
   }
 }
-console.log(saludo(undefined));
 
 function saludo(idioma) {
   // Devuelve un saludo en tres diferentes lenguajes:
@@ -297,6 +296,25 @@ function colors(color) {
   //En caso que el color recibido sea "orange", devuleve --> "This is orange"
   //Caso default: devuelve --> "Color not found"
   //Usar el statement Switch.
+  let estado = null;
+  switch (color) {
+    case "blue":
+      estado = "This is blue";
+      break;
+    case "red":
+      estado = "This is red";
+      break;
+    case "green":
+      estado = "This is green";
+      break;
+    case "orange":
+      estado = "This is orange";
+      break;
+    default:
+      estado = "Color not found";
+      break;
+  }
+  return estado;
 }
 
 function esDiezOCinco(numero) {
@@ -331,22 +349,7 @@ function operadoresLogicos(num1, num2, num3) {
   //Si num3 es más grande que num1 y num2, aumentar su valor en 1 y retornar el nuevo valor.
   //0 no es ni positivo ni negativo. Si alguno de los argumentos es 0, retornar "Error".
   //Si no se cumplen ninguna de las condiciones anteriores, retornar false.
-  if (num1 != 0 && num2 != 0 && num3 != 0) {
-    if (num1 > 0 && num2 > 0 && num3 > 0) {
-      if (num1 > num2 && num1 > num3 && num1 > 0) {
-        return "Numero 1 es mayor y positivo";
-      } else if (num3 > num2 && num3 > num1) {
-        return num3 + 1;
-      }
-    } else {
-      return false;
-    }
-  } else {
-    return "Error";
-  }
 }
-
-console.log(operadoresLogicos(-1, 2, 5));
 
 function esPrimo(numero) {
   // Devuelve "true" si "numero" es primo
@@ -354,6 +357,15 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
+  if (numero <= 1) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(numero); i++) {
+    if (numero % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 function esVerdadero(valor) {
