@@ -1,19 +1,13 @@
-const doc = document.getElementsByTagName('li')
-
-console.log(doc[0]);
-
 // const substitulo = document.createElement("h3");
 
 // const texto = document.createTextNode("esto es un subtitulo");
 
 const listaEstudiantes = document.querySelector("ul");
+const eleis = document.createElement("h1");
+eleis.textContent = "Seso ";
 
-const andres = document.createElement("li");
+const al = document.querySelector("#a");
 
-const andres_text = document.createTextNode("Andres");
+eleis.style.color = "rgb(180,80,70)";
 
-andres.appendChild(andres_text);
-
-listaEstudiantes.appendChild(andres);
-
-document.querySelector("ul").innerHTML += "<li>Andres</li>";
+listaEstudiantes.insertAdjacentElement("beforebegin",eleis);
