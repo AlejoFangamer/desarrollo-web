@@ -34,5 +34,8 @@ for (let i = 0; i < razas.length; i++) {
 ul.append(...lista);
 app.append(h1, p, img, h2, ul);
 
-img.style.border = "8px solid red";
+img.style.border = "80px solid red";
 img.classList.add("nueva-clase");
+img.style.borderRadius = "50px";
+
+console.log("si");
