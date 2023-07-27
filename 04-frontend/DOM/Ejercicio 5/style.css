@@ -1,0 +1,10 @@
+* {
+  width: 70%;
+  align-content: center;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  
+}
