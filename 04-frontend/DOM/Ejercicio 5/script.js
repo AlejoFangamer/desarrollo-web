@@ -1,11 +1,13 @@
 let imc, estado;
 
-const calculadora = document.querySelector("#calculadora");
+const calculadora = document.querySelector(".calculadora");
 
 const pesoInput = document.querySelector("#int_peso");
 const alturaInput = document.querySelector("#int_altura");
 
 const botonInput = document.querySelector("#btn");
+
+const botonSum = document.querySelectorAll(".sum");
 
 const resultado = document.createElement("p");
 calculadora.appendChild(resultado);
@@ -43,3 +45,17 @@ botonInput.addEventListener("click", () => {
   pesoInput.value = "";
   alturaInput.value = "";
 });
+
+botonSum.forEach(boton => {
+  boton.addEventListener("click", () => {
+    const valorActual = parseInt(alturaInput.value);
+    if (boton.classList.contains('sum2')){
+      alturaInput.value++;
+    }else{
+      alturaInput.value+=0.1;
+    }
+    alturaInput.value = suma;
+  })
+});
+
+console.log(botonSum)

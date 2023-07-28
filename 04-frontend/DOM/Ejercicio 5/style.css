@@ -1,10 +1,69 @@
 * {
-  width: 70%;
-  align-content: center;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body {
+html,body{
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main{
   display: flex;
   flex-direction: column;
-  
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(0, 8, 44);
+}
+
+.calculadora{
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  background-color: white;
+  padding: 30px;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+.peso{
+  display: flex;
+  justify-content: space-evenly;
+  height: 30px;
+}
+
+.peso input {
+  height: 100%;
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(188, 225, 255);
+  text-align: center;
+}
+
+.peso button {
+  border-style: none;
+  background-color: white;
+}
+
+img {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#btn {
+  background-color: rgb(39, 114, 255);
+  color: white;
+  border: 2px solid rgb(39, 114, 255);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  transition: all 1s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+#btn:hover {
+  color: black;
+  background-color: rgb(185, 210, 255);
 }

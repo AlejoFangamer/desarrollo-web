@@ -5,16 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indice de masa corporal (DOM)</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="calculadora">
-      <h1>Indice de masa corporal (DOM)</h1>
-      <p>Peso:</p>
-      <input type="number" id="int_peso" step="0.1"/>
-      <p>Altura:</p>
-      <input type="number" id="int_altura" step="0.1"/>
-      <button id="btn">Calcular</button>
-    </div>
-    <script src="script.js"></script>
+    <main>
+      <div class ="calculadora">
+        <h1>Indice de masa corporal (DOM)</h1>
+        <p>Peso:</p>
+        <div class = "peso">
+          <input type="number" id="int_peso" step="0.1"/>
+        </div>
+        <p>Altura:</p>
+        <div class = "peso">
+          <button><</button>
+          <button><<</button>
+          <input type="number" id="int_altura" step="0.1"/>
+          <button class="sum">
+            <img src="Arrow.png" alt="">
+          </button>
+          <button class="btn_peso sum sum2">
+            <img src="Arrow.png" alt="">
+            <img src="Arrow.png" alt="">
+          </button>
+        </div>
+        <button id="btn">Calcular</button>
+      </div>
+      <script src="script.js"></script>
+    </main>
   </body>
 </html>
