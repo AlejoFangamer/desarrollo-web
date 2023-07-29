@@ -4,17 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Indice de masa corporal (DOM)</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id="calculadora">
-      <h1>Indice de masa corporal (DOM)</h1>
-      <p>Peso:</p>
-      <input type="number" id="int_peso" step="0.1"/>
-      <p>Altura:</p>
-      <input type="number" id="int_altura" step="0.1"/>
-      <button id="btn">Calcular</button>
-    </div>
-    <script src="script.js"></script>
+    <main>
+      <div id="calculadora">
+        <h1>Indice de masa corporal (DOM)</h1>
+        <div class="part peso">
+          <p>Peso:</p>
+          <input type="number" id="int_peso" step="0.1" required />
+        </div>
+        <div class="part altura">
+          <p>Altura:</p>
+          <input type="number" id="int_altura" step="0.1" required/>
+        </div>
+        <button id="btn">Calcular</button>
+
+        <div id="resultados" class="oculto"></div>
+      </div>
+      <script src="script.js"></script>
+    </main>
   </body>
 </html>
