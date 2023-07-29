@@ -22,11 +22,17 @@
         </div>
         <div class="part altura">
           <p>Altura:</p>
-          <input type="number" id="int_altura" step="0.1" required/>
+          <input type="number" id="int_altura" step="0.1" required />
         </div>
-        <button id="btn">Calcular</button>
+        <button id="btn">
+          <span class="button-text">Calcular</span>
+        </button>
 
-        <div id="resultados" class="oculto"></div>
+        <div id="resultados">
+          <h2>Resultados:</h2>
+          <p id="IMC_num">Tu IMC es de:</p>
+          <h2 id="IMC_estado">Tu IMC es de:</h2>
+        </div>
       </div>
       <script src="script.js"></script>
     </main>

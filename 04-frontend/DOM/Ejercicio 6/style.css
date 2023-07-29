@@ -1,0 +1,82 @@
+:root {
+  --tipografia: "Kanit", sans-serif;
+
+  --color-principal: #2b2e4a;
+  --color-fondo: #53354a;
+  --color-caja: #e84545;
+
+  --tamaño-titulo: 40px;
+  --tamaño-texto: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--tipografia);
+  color: var(--color-principal);
+  scroll-behavior: smooth;
+}
+
+html {
+  background-color: var(--color-fondo);
+  font-size: var(--tamaño-texto);
+
+  font-weight: 300;
+}
+
+header {
+  font-size: var(--tamaño-titulo);
+  background-color: var(--color-caja);
+  text-align: center;
+  font-weight: 800;
+  padding: 1rem;
+}
+
+footer {
+  font-size: var(--tamaño-titulo);
+  background-color: var(--color-caja);
+  text-align: center;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+section {
+  padding: 2rem;
+  min-height: 100vh;
+  color: var(--color-caja);
+  font-weight: 800;
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #2b2e4a8e;
+}
+
+.menu-lateral nav{
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.menu-lateral nav a {
+  display: inline-block;
+  color: var(--color-caja);
+  text-decoration:none;
+  font-size: 40px;
+  font-weight: 800;
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menu-lateral nav a:hover{
+  transform: scale(1.2);
+}
