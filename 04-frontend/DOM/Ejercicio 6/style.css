@@ -24,7 +24,14 @@ html {
   font-weight: 300;
 }
 
+main {
+  position: relative;
+  top: 100px;
+  height: calc(100%-100px);
+}
+
 header {
+  position: fixed;
   width: 100%;
   font-size: var(--tamaño-titulo);
   background-color: var(--color-caja);
@@ -36,7 +43,6 @@ header {
 }
 
 footer {
-  position: sticky;
   font-size: var(--tamaño-titulo);
   background-color: var(--color-caja);
   text-align: center;
@@ -49,10 +55,13 @@ footer {
 section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 100px);
   font-weight: 800;
   text-align: center;
+  border: 1px solid salmon;
 }
 
 form {
@@ -64,13 +73,6 @@ form {
 section h2 {
   color: var(--color-caja);
   margin: 20px;
-}
-
-section object {
-  width: 100%;
-  height: 93%;
-  border-radius: 50px;
-  box-shadow: 8px 8px 10px var(--color-principal);
 }
 
 .menu-lateral {
@@ -125,4 +127,108 @@ section object {
   bottom: 1rem;
   right: 1rem;
   background-color: var(--color-caja);
+}
+
+/* CALCULADORA IMC */
+
+#calculadora {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+
+  border-radius: 20px;
+  background-color: #468b97;
+
+  box-shadow: 8px 8px 50px #0f3040;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: white;
+}
+
+.part {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 20px;
+  margin-bottom: 25px;
+  padding: 5px;
+  border-radius: 10px;
+  color: aliceblue;
+  font-weight: 600;
+}
+
+.peso {
+  background-color: #ef6262;
+}
+
+.peso input {
+  background-color: #ac4444;
+}
+
+.altura {
+  background-color: #f3aa60;
+}
+
+.altura input {
+  background-color: #cc743a;
+}
+
+.part input {
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+}
+
+.part p {
+  width: 50%;
+  color: white;
+}
+
+#btn {
+  padding: 10px;
+
+  border: 2px solid white;
+  border-radius: 10px;
+
+  font-size: 20px;
+  font-weight: 600;
+  background-color: white;
+
+  transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#btn:not(:disabled):hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+#btn .button-text {
+  display: inline-block;
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#btn:not(:disabled):hover .button-text {
+  transform: scale(1.2);
+  color: white;
+}
+
+#resultados {
+  display: none;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 25px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 10px;
 }

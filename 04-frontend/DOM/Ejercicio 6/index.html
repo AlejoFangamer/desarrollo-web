@@ -26,27 +26,51 @@
 
     <aside class="menu-lateral">
       <nav>
-        <a href="#s1">Calculadora IMC</a>
-        <a href="#s2">Seccion 2</a>
-        <a href="#s3">Seccion 3</a>
-        <a href="#s4">Seccion 4</a>
+        <a href="#s1">Presentacion</a>
+        <a href="#s2">Calculadora IMC</a>
+        <a href="#s3">Reloj Digital</a>
+        <a href="#s4">Calculadora</a>
+        <a href="#s5">Contacto</a>
       </nav>
     </aside>
 
     <main>
       <section id="s1">
-        <h2>Calculadora IMC</h2>
+        <h2>Presentacion</h2>
         <object data="/DOM/Ejercicio 5/index.html"></object>
       </section>
       <section id="s2">
-        <h2>Seccion 2</h2>
+        <h2>Calculadora IMC</h2>
+        <div id="calculadora">
+          <h1>Indice de masa corporal (DOM)</h1>
+          <div class="part peso">
+            <p>Peso:</p>
+            <input type="number" id="int_peso" step="0.1" required />
+          </div>
+          <div class="part altura">
+            <p>Altura:</p>
+            <input type="number" id="int_altura" step="0.1" required />
+          </div>
+          <button id="btn">
+            <span class="button-text">Calcular</span>
+          </button>
+
+          <div id="resultados">
+            <h2>Resultados:</h2>
+            <p id="IMC_num">Tu IMC es de:</p>
+            <h2 id="IMC_estado">Tu IMC es de:</h2>
+          </div>
+        </div>
       </section>
       <section id="s3">
         <h2>Seccion 3</h2>
       </section>
       <section id="s4">
-        <h2>Seccion 4</h2>
-        <form action="https://formsubmit.co/xxalejoxx71@gmail.com" method="POST">
+        <h2>Contacto</h2>
+        <form
+          action="https://formsubmit.co/xxalejoxx71@gmail.com"
+          method="POST"
+        >
           <input type="text" name="name" placeholder="Nombre" />
           <input type="email" name="email" placeholder="Email" />
           <input type="text" name="message" placeholder="Mensaje" />
@@ -64,5 +88,6 @@
       </button>
     </footer>
     <script type="module" src="index.js"></script>
+    <script src="index/menu_hamburguesa.js"></script>
   </body>
 </html>
