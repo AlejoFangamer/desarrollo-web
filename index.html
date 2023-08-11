@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cuadros con Números Aleatorios</title>
+  <style>
+    body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.cuadro {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.numero {
+  width: 30px;
+  height: 30px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="cuadro">
+    <div class="numero">1</div>
+  </div>
+  <div class="cuadro">
+    <div class="numero">2</div>
+  </div>
+  <div class="cuadro">
+    <div class="numero">3</div>
+  </div>
+  <!-- Agrega más cuadros según necesites -->
+</body>
+</html>

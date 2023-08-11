@@ -1,35 +1,52 @@
 const d = document;
 
-const lista_c = d.querySelector("#comentarios");
-const ul = d.createElement("ul");
+d.addEventListener("DOMContentLoaded", () => {
+  function leerFetch() {
+    fetch("https://jsonplaceholder.typicode.com/comments")
+      .then((data) => data.json())
+      .then((resp) => {
+        for (const a of resp) {
+          const lista = d.querySelector("#lista");
 
-let lista_comentarios = [];
+          const contenedor = d.createElement("li");
+          const nombre = d.createElement("h1");
+          const comentario = d.createElement("p");
+          const contenedor_numero = d.createElement("div");
+          const numero_id = d.createElement("p");
 
-function CrearUsuario(num_usuario) {
-  const url = `https://jsonplaceholder.typicode.com/comments/${num_usuario}`;
-  fetch(url)
-    .then((info) => info.json())
-    .then((response) => {
-      const comentario = d.createElement("li");
-
-      const usuario_nombre = d.createElement("h2");
-      const usuario_comentario = d.createElement("p");
-
-      usuario_nombre.textContent = response.name;
-      usuario_comentario.textContent = response.body;
-
-      comentario.append(usuario_nombre, usuario_comentario);
-
-      ul.append(comentario);
-    })
-    .catch((error) => console.log("se cagó"));
-}
-
-async function CrearListaEntera() {
-  for (let index = 0; index <= 3; index++) {
-    await CrearUsuario(index);
+          numero_id.textContent = a.id;
+          numero_id.className = "num_id";
+          contenedor_numero.className = "num";
+          comentario.textContent = a.body;
+          nombre.textContent = a.name;
+          contenedor_numero.appendChild(numero_id);
+          contenedor.append(contenedor_numero, nombre, comentario);
+          lista.append(contenedor);
+        }
+      });
   }
-  lista_c.append(ul);
-}
 
-CrearListaEntera();
+  const generarLista = async function () {
+    await leerFetch();
+  };
+
+  generarLista();
+
+  const cuadros = document.querySelectorAll(".num");
+
+  const ajustarTamañoNumeros = () => {
+    cuadros.forEach((cuadro) => {
+      const numero = cuadro.querySelector(".num_id");
+      const cuadroWidth = cuadro.clientWidth;
+      const fontSize = parseFloat(window.getComputedStyle(numero).fontSize);
+
+      if (numero.scrollWidth > cuadroWidth) {
+        const nuevoFontSize = fontSize * (cuadroWidth / numero.scrollWidth);
+        numero.style.fontSize = nuevoFontSize + "px";
+      }
+    });
+  };
+
+  ajustarTamañoNumeros();
+  window.addEventListener("resize", ajustarTamañoNumeros);
+});

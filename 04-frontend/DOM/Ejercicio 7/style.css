@@ -1,4 +1,50 @@
-li {
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #F2E5E5;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 50px;
+}
+
+#comentarios {
+  width: 600px;
+}
+
+#lista li{
+  position: relative;
+  display: flex;
+
+  margin: 50px;
+  padding: 25px;
+
+  border-radius: 15px;
+  background-color: #E8C4C4;
+  list-style: none;
+}
+
+.num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 1.2em;
+  height: 1.2em;
+
+  font-size: 40px;
+  border-radius: 50%;
+
+  position: absolute;
   background-color: aqua;
-  border-radius: 10px;
+  top: -0.5em;
+  left: -0.5em;
+
+  transform: rotate(-25deg);
 }
