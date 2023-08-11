@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios con el DOM</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+      integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>Clubhouse</div>
+    </header>
+
+    <aside class="menu-lateral">
+      <nav>
+        <a href="#s1">Presentacion</a>
+        <a href="#s2">Calculadora IMC</a>
+        <a href="#s3">Reloj Digital</a>
+        <a href="#s4">Calculadora</a>
+        <a href="#s5">Contacto</a>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="s1">
+        <h2>Presentacion</h2>
+        <object data="/DOM/Ejercicio 5/index.html"></object>
+      </section>
+      <section id="s2">
+        <h2>Calculadora IMC</h2>
+        <div id="calculadora">
+          <h1>Indice de masa corporal (DOM)</h1>
+          <div class="part peso">
+            <p>Peso:</p>
+            <input type="number" id="int_peso" step="0.1" required />
+          </div>
+          <div class="part altura">
+            <p>Altura:</p>
+            <input type="number" id="int_altura" step="0.1" required />
+          </div>
+          <button id="btn">
+            <span class="button-text">Calcular</span>
+          </button>
+
+          <div id="resultados">
+            <h2>Resultados:</h2>
+            <p id="IMC_num">Tu IMC es de:</p>
+            <h2 id="IMC_estado">Tu IMC es de:</h2>
+          </div>
+        </div>
+      </section>
+      <section id="s3">
+        <h2>Seccion 3</h2>
+      </section>
+      <section id="s4">
+        <h2>Contacto</h2>
+        <form
+          action="https://formsubmit.co/xxalejoxx71@gmail.com"
+          method="POST"
+        >
+          <input type="text" name="name" placeholder="Nombre" />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="text" name="message" placeholder="Mensaje" />
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div>Memes</div>
+      <button class="menu-btn hamburger hamburger--elastic" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </footer>
+    <script type="module" src="index.js"></script>
+    <script src="index/menu_hamburguesa.js"></script>
+  </body>
+</html>
