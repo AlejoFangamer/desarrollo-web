@@ -1,65 +1,117 @@
-@import url("https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+  line-height: 105%;
 }
 
 body {
-  background-color: #f2e5e5;
+  background-color: #35a29f;
 }
 
 main {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   padding: 50px;
 }
 
 #comentarios {
-  width: 600px;
+  width: 100%;
+}
+
+#lista {
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #lista li {
   position: relative;
   display: flex;
+  flex-direction: row;
+  align-content: center;
 
-  margin: 50px;
+  max-width: 800px;
+
+  margin-bottom: 50px;
   padding: 25px;
 
   border-radius: 15px;
-  background-color: #e8c4c4;
   list-style: none;
+  gap: 20px;
 }
 
 .num {
-  width: 50px;
-  height: 50px;
-
-  border-radius: 50%;
-  border: 1px solid black;
-
-  position: absolute;
-  background-color: aqua;
-  top: -0.5em;
-  left: -0.5em;
-
-  padding: 5px;
-
-  transform: rotate(-25deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100px;
+  gap: 15px;
 }
 
-.num_id {
+.num .num_id {
   display: flex;
+  flex-direction: column;
+
   justify-content: center;
   align-content: center;
-  align-items: center;
-
-  font-family: "Cherry Bomb One", cursive;
-
   text-align: center;
-  transform-origin: center;
-  font-size: 45px;
+
+  width: 60px;
 
   transform: scaleX(1);
+  border-radius: 50px;
+
+  color: white;
+  background-color: #0b666a;
+
+  padding: 0px 20px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 800;
+}
+
+.imagen-usuario {
+  width: 60px;
+  background-image: url(Icono.png);
+}
+
+.post {
+  background-color: #071952;
+  border-radius: 20px;
+  border: 5px solid black;
+  box-shadow: 7px 7px black;
+}
+
+.post p {
+  font-size: 20px;
+  color: rgb(95, 95, 95);
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.post h2 {
+  font-size: 40px;
+  color: white;
+  padding: 20px;
+}
+
+.error {
+  display: none;
+  flex-direction: column;
+}
+
+#imagen-error {
+  width: 100%;
+  align-items: center;
+}
+
+#imagen-error img {
+  max-width: 200px;
 }
